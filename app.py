@@ -27,7 +27,7 @@ def predict():
 	# # output = {'results': int(result[0])}
 	# output=int(result[0])
 
-	return jsonify(results=output[0][0])
+	return jsonify(acc=output[0][0], rej=output[0][1])
 	# output=round(output[0],1)
 	# return render_template('index.html', prediction_text='Output is: {}'.format(output))
 
