@@ -24,11 +24,7 @@ def predict():
 	output = model.predict_proba(final_features)
 	# output=loaded_model.predict_proba([[1,0,0,1,0,0,0,0,0,0,0,0, 0.5, 0.7, 4.0, 160, 3.0, 0, 0]])
 
-	# # output = {'results': int(result[0])}
-	# output=int(result[0])
-
 	return jsonify(acc=output[0][0], rej=output[0][1])
-	# output=round(output[0],1)
 	# return render_template('index.html', prediction_text='Output is: {}'.format(output))
 
 if __name__ == "__main__":
